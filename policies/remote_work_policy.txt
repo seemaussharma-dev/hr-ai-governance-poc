@@ -1,0 +1,17 @@
+Document-ID: HR-REMOTE-001
+Title: ABC Horizon Media Remote Work Policy
+Version: 1.0
+Classification: Internal Synthetic
+Status: Approved for POC
+
+## Eligibility
+Employees whose roles can be performed remotely may request a hybrid arrangement. Eligibility depends on job responsibilities, operational coverage, information-security requirements, and manager approval. The assistant does not determine individual eligibility.
+
+## Request Process
+An employee submits a remote-work request to the manager using the approved HR form. The request states the proposed schedule, work location, communication plan, and equipment needs. The manager and Human Resources review the request before approval.
+
+## Information Security
+Employees working remotely must use company-approved devices, multifactor authentication, secure network access, and approved collaboration tools. Confidential material must not be printed or stored on personal devices.
+
+## Human Support
+Requests involving disability accommodation, medical information, legal rights, or individual performance must be handled confidentially by Human Resources.

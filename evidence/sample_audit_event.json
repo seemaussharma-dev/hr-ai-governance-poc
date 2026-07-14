@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "2026-07-14T22:00:00+00:00",
+  "event_type": "question_evaluated",
+  "decision": "blocked",
+  "controls": [
+    "personal_data_minimization"
+  ],
+  "categories": [
+    "email_address"
+  ],
+  "source_document": null,
+  "raw_question_stored": false,
+  "answer_text_stored": false,
+  "personal_data_intentionally_stored": false
+}

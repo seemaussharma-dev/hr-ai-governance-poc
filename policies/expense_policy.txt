@@ -1,0 +1,17 @@
+Document-ID: FIN-EXPENSE-001
+Title: ABC Horizon Media Business Expense Reimbursement Policy
+Version: 1.0
+Classification: Internal Synthetic
+Status: Approved for POC
+
+## Eligible Expenses
+Reasonable and necessary business travel, lodging, meals, and approved supplies may be reimbursed. Personal expenses, fines, entertainment without business purpose, and unapproved upgrades are not reimbursable.
+
+## Submission Deadline
+Employees should submit an expense report within 30 calendar days after the expense date. The report must include the business purpose and an itemized receipt for expenses of 25 US dollars or more.
+
+## Approval
+The employee's manager approves ordinary business expenses. Hotel expenses above 250 US dollars per night and any single expense above 500 US dollars require Finance approval in addition to manager approval.
+
+## Human Support
+Questions about tax treatment, disputed reimbursements, or an individual's payment status must be directed to Finance or Human Resources.

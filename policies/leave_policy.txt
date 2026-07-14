@@ -1,0 +1,17 @@
+Document-ID: HR-LEAVE-001
+Title: ABC Horizon Media Vacation and Leave Policy
+Version: 1.0
+Classification: Internal Synthetic
+Status: Approved for POC
+
+## Annual Vacation Entitlement
+Full-time employees receive 15 paid vacation days in each calendar year. Part-time employees receive a prorated entitlement based on scheduled hours. These values are fictional and are not connected to any real employee record.
+
+## Request and Approval
+Employees should submit a vacation request to their manager at least 10 calendar days before the planned absence. The manager reviews operational coverage and normally responds within three business days. A request is not approved until the manager confirms approval.
+
+## Carryover
+Employees may carry over up to five unused vacation days into the next calendar year. Carried-over vacation should be used by March 31 unless Human Resources approves an exception.
+
+## Human Support
+Questions about an individual balance, eligibility, legal entitlement, or special circumstance must be handled confidentially by Human Resources.
