@@ -29,7 +29,14 @@ class ResponseBuilderTests(unittest.TestCase):
         response = build_response(question, self.engine.search(question))
         self.assertEqual(response.status, "escalated")
         self.assertIn("Human Resources", response.answer)
+    def test_company_parental_leave_question_escalates(self):
+        question = "What is the company's parental leave policy?"
+        response = build_response(question, self.engine.search(question))
 
+        self.assertEqual(response.status, "escalated")
+        self.assertIn("Human Resources", response.answer)
+        # self.assertIsNone(response.source_title)
+        self.assertEqual(response.source_title, "")
     def test_response_is_extractive(self):
         question = "When must I submit an expense report?"
         response = build_response(question, self.engine.search(question))
@@ -37,6 +44,7 @@ class ResponseBuilderTests(unittest.TestCase):
             result.chunk.text for result in self.engine.search(question)
             if result.chunk.title == response.source_title
             and result.chunk.section == response.source_section
+    
         ]
         self.assertTrue(any(response.answer in text for text in source_texts))
 
