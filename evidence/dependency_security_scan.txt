@@ -1,0 +1,26 @@
+Dependency Security Scan Evidence
+
+Project: HR AI Governance POC — Stage 1
+Scan date: 15 July 2026
+Environment: Local Python virtual environment
+Scanner: pip-audit
+Requirements file: requirements.txt
+
+Command executed:
+
+python -m pip_audit -r requirements.txt
+
+Result:
+
+No known vulnerabilities found
+
+Conclusion:
+
+The Python packages declared in requirements.txt had no known vulnerabilities reported by pip-audit at the time of testing.
+
+Limitations:
+
+- Vulnerability databases change over time.
+- This result applies only to the package versions resolved during this scan.
+- The scan does not replace secure coding review, application testing, or production security approval.
+- The scan should be repeated before every public or production release.
