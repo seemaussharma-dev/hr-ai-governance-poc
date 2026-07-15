@@ -9,10 +9,12 @@ from typing import Dict, Iterable, List
 
 
 STOP_WORDS = {
-    "a", "an", "and", "are", "as", "at", "be", "by", "can", "do", "does",
-    "for", "from", "how", "i", "in", "is", "it", "me", "of", "on", "or",
-    "our", "should", "the", "their", "to", "what", "when", "where", "who",
-    "with", "you", "your"
+    "a", "an", "and", "are", "as", "at", "be", "by", "can",
+    "company", "companies", "employee", "employees",
+    "do", "does", "for", "from", "how", "i", "in", "is", "it",
+    "me", "of", "on", "or", "our", "policy", "policies",
+    "should", "the", "their", "to", "what", "when", "where",
+    "who", "with", "you", "your"
 }
 
 SYNONYMS = {
