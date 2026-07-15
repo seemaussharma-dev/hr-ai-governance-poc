@@ -6,83 +6,26 @@ HR AI Governance POC — Stage 1
 
 ## Execution date
 
-14 July 2026
+15 July 2026
 
 ## Environment
 
-- Python: 3.13.5
-- Test framework: Python unittest
-- External model/API: None
-- Data: Synthetic policies only
+- Python: 3.13.7
+- Test framework: Python `unittest`
+- External AI model/API: None
+- Application type: Deterministic policy-retrieval prototype
+- Data: Approved synthetic HR policies only
+- Repository visibility during testing: Private
 
 ## Result
 
-- Total tests: 20
-- Passed: 20
+- Total tests: 21
+- Passed: 21
 - Failed: 0
 - Errors: 0
 - Overall status: PASS
 
-## Control areas tested
+## Command executed
 
-- Input validation
-- Personal-data minimization
-- Salary and payroll restriction
-- Medical and disability restriction
-- Performance, complaint, and disciplinary restriction
-- Automated employment-decision prohibition
-- Prompt-injection detection
-- Approved synthetic source validation
-- Correct policy retrieval
-- Extractive grounded response
-- Source title, section, and version traceability
-- Human escalation for unsupported questions
-- Audit logging without raw question or answer
-
-## Full test output
-
-```text
-Spreadsheet runtime warmup failed during python startup
-Traceback (most recent call last):
-  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
-  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
-  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
-  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
-  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/generated/interface/models.py", line 30820, in hydrate_crdt_from_proto
-  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/rpc/remote.py", line 749, in __call__
-  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/rpc/client.py", line 150, in call
-artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
-test_log_excludes_raw_question_and_answer (test_audit.AuditTests.test_log_excludes_raw_question_and_answer) ... ok
-test_allows_general_policy_question (test_guardrails.GuardrailTests.test_allows_general_policy_question) ... ok
-test_blocks_decision_request (test_guardrails.GuardrailTests.test_blocks_decision_request) ... ok
-test_blocks_email_address (test_guardrails.GuardrailTests.test_blocks_email_address) ... ok
-test_blocks_medical (test_guardrails.GuardrailTests.test_blocks_medical) ... ok
-test_blocks_prompt_injection (test_guardrails.GuardrailTests.test_blocks_prompt_injection) ... ok
-test_blocks_salary (test_guardrails.GuardrailTests.test_blocks_salary) ... ok
-test_blocks_ssn (test_guardrails.GuardrailTests.test_blocks_ssn) ... ok
-test_limits_question_length (test_guardrails.GuardrailTests.test_limits_question_length) ... ok
-test_expense_question_retrieves_expense_policy (test_policy_search.PolicySearchTests.test_expense_question_retrieves_expense_policy) ... ok
-test_loads_only_approved_synthetic_policies (test_policy_search.PolicySearchTests.test_loads_only_approved_synthetic_policies) ... ok
-test_remote_question_retrieves_remote_policy (test_policy_search.PolicySearchTests.test_remote_question_retrieves_remote_policy) ... ok
-test_source_has_traceability_metadata (test_policy_search.PolicySearchTests.test_source_has_traceability_metadata) ... ok
-test_vacation_question_retrieves_leave_policy (test_policy_search.PolicySearchTests.test_vacation_question_retrieves_leave_policy) ... ok
-test_confidential_hr_categories_are_blocked (test_regulatory_controls.RegulatoryControlTests.test_confidential_hr_categories_are_blocked) ... ok
-test_human_escalation_for_missing_policy (test_regulatory_controls.RegulatoryControlTests.test_human_escalation_for_missing_policy) ... ok
-test_no_automated_employment_decision (test_regulatory_controls.RegulatoryControlTests.test_no_automated_employment_decision) ... ok
-test_answer_has_source (test_response_builder.ResponseBuilderTests.test_answer_has_source) ... ok
-test_response_is_extractive (test_response_builder.ResponseBuilderTests.test_response_is_extractive) ... ok
-test_unsupported_question_escalates (test_response_builder.ResponseBuilderTests.test_unsupported_question_escalates) ... ok
-
-----------------------------------------------------------------------
-Ran 20 tests in 0.007s
-
-OK
-```
-
-## Interpretation
-
-Passing tests demonstrate that the defined Stage 1 controls behave as expected for the documented test cases. They do not prove legal compliance, certification, production security, or protection against every possible input.
-
-## Release decision
-
-Stage 1 is technically suitable for a synthetic public portfolio demonstration, subject to completion of the GitHub publication checklist.
+```bash
+python -m unittest discover -s ./tests -p "test_*.py" -v
