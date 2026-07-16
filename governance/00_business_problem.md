@@ -2,7 +2,7 @@
 
 ## Organization
 
-ABC Horizon Media is a fictional small broadcast and digital-media company with 75 employees in the United States and India.
+ssp-dev-hr-aigovern-poc is a fictional small broadcast and digital-media company with 75 employees in the United States and India.
 
 ## Current problem
 

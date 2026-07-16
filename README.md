@@ -8,7 +8,7 @@ Employees frequently ask HR routine questions about leave, remote work, and expe
 
 ## MVP solution
 
-The fictional company **ABC Horizon Media** uses an offline policy assistant that:
+The fictional company **ssp-dev-hr-aigovern-poc** uses an offline policy assistant that:
 
 - displays an automated-system and privacy notice;
 - answers only general policy questions;

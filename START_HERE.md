@@ -14,7 +14,7 @@ You will show the project in this order:
 
 ## What Stage 1 is
 
-Stage 1 is a public-safe, offline HR policy assistant for a fictional company called **ABC Horizon Media**.
+Stage 1 is a public-safe, offline HR policy assistant for a fictional company called **ssp-dev-hr-aigovern-poc**.
 
 It uses:
 

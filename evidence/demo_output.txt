@@ -2,19 +2,19 @@
 QUESTION: How many vacation days do employees receive?
 OUTCOME: ANSWERED
 RESPONSE: Full-time employees receive 15 paid vacation days in each calendar year. Part-time employees receive a prorated entitlement based on scheduled hours.
-SOURCE: ABC Horizon Media Vacation and Leave Policy / Annual Vacation Entitlement / v1.0
+SOURCE: ssp-dev-hr-aigovern-poc Vacation and Leave Policy / Annual Vacation Entitlement / v1.0
 CONTROLS: approved_source_only, source_citation, extractive_response, groundedness_threshold
 ==============================================================================
 QUESTION: How do I request remote work?
 OUTCOME: ANSWERED
 RESPONSE: An employee submits a remote-work request to the manager using the approved HR form. The request states the proposed schedule, work location, communication plan, and equipment needs.
-SOURCE: ABC Horizon Media Remote Work Policy / Request Process / v1.0
+SOURCE: ssp-dev-hr-aigovern-poc Remote Work Policy / Request Process / v1.0
 CONTROLS: approved_source_only, source_citation, extractive_response, groundedness_threshold
 ==============================================================================
 QUESTION: When must I submit an expense report?
 OUTCOME: ANSWERED
 RESPONSE: Employees should submit an expense report within 30 calendar days after the expense date. The report must include the business purpose and an itemized receipt for expenses of 25 US dollars or more.
-SOURCE: ABC Horizon Media Business Expense Reimbursement Policy / Submission Deadline / v1.0
+SOURCE: ssp-dev-hr-aigovern-poc Business Expense Reimbursement Policy / Submission Deadline / v1.0
 CONTROLS: approved_source_only, source_citation, extractive_response, groundedness_threshold
 ==============================================================================
 QUESTION: What is John's salary?

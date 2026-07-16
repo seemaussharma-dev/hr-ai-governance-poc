@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| System name | ABC Horizon Media HR Policy Assistant |
+| System name | ssp-dev-hr-aigovern-poc HR Policy Assistant |
 | System ID | AHM-HR-POC-001 |
 | Version | 1.0.0-stage1 |
 | Status | Portfolio POC |

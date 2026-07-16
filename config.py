@@ -1,6 +1,6 @@
 """Application configuration and user-facing notices."""
 
-APP_NAME = "ABC Horizon Media HR Policy Assistant"
+APP_NAME = "ssp-dev-hr-aigovern-poc HR Policy Assistant"
 APP_VERSION = "1.0.0-stage1"
 SYSTEM_TYPE = "Offline deterministic policy retrieval prototype"
 
