@@ -6,7 +6,7 @@ HR AI Governance POC — Stage 1
 
 ## Sponsor
 
-Fictional HR Director, ABC Horizon Media
+Fictional HR Director, ssp-dev-hr-aigovern-poc
 
 ## Product owner
 

@@ -19,7 +19,7 @@ class ResponseBuilderTests(unittest.TestCase):
         self.assertIn("15 paid vacation days", response.answer)
         self.assertEqual(
             response.source_title,
-            "ABC Horizon Media Vacation and Leave Policy",
+            "ssp-dev-hr-aigovern-poc Vacation and Leave Policy",
         )
         self.assertTrue(response.source_section)
         self.assertTrue(response.source_version)

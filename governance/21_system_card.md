@@ -2,7 +2,7 @@
 
 ## System
 
-ABC Horizon Media HR Policy Assistant, Stage 1.
+ssp-dev-hr-aigovern-poc HR Policy Assistant, Stage 1.
 
 ## Type
 

@@ -1,5 +1,5 @@
 Document-ID: HR-LEAVE-001
-Title: ABC Horizon Media Vacation and Leave Policy
+Title: ssp-dev-hr-aigovern-poc Vacation and Leave Policy
 Version: 1.0
 Classification: Internal Synthetic
 Status: Approved for POC

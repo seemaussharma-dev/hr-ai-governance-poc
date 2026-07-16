@@ -1,5 +1,5 @@
 Document-ID: HR-REMOTE-001
-Title: ABC Horizon Media Remote Work Policy
+Title: ssp-dev-hr-aigovern-poc Remote Work Policy
 Version: 1.0
 Classification: Internal Synthetic
 Status: Approved for POC
