@@ -42,6 +42,7 @@ with st.sidebar:
     st.write("- Vacation and leave")
     st.write("- Remote work")
     st.write("- Expense reimbursement")
+    st.write("- Equal employment opportunity and non-discrimination")
 
     st.header("Prohibited scope")
     st.write("- Personal employee records")
@@ -60,13 +61,31 @@ if st.button("Submit question", type="primary"):
     decision = evaluate_question(question)
 
     if not decision.allowed:
-        st.error(decision.user_message)
-        st.write("**Control outcome:** Request blocked before policy retrieval.")
-        st.write("**Detected categories:** " + ", ".join(decision.categories))
-        st.write("**Controls applied:** " + ", ".join(decision.controls))
+        if decision.reason == "human_escalation_required":
+            st.warning(decision.user_message)
+            st.write(
+                "**Control outcome:** Human HR escalation before policy retrieval."
+            )
+            audit_decision = "escalated"
+        else:
+            st.error(decision.user_message)
+            st.write(
+                "**Control outcome:** Request blocked before policy retrieval."
+            )
+            audit_decision = "blocked"
+
+        st.write(
+            "**Detected categories:** "
+            + ", ".join(decision.categories)
+        )
+        st.write(
+            "**Controls applied:** "
+            + ", ".join(decision.controls)
+        )
+
         log_event(
             event_type="question_evaluated",
-            decision="blocked",
+            decision=audit_decision,
             controls=decision.controls,
             categories=decision.categories,
         )

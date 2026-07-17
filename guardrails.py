@@ -73,6 +73,44 @@ _DECISION_TERMS = (
     "likely to resign",
 )
 
+_PROTECTED_CHARACTERISTIC_TERMS = (
+    "race",
+    "color",
+    "religion",
+    "sex",
+    "gender",
+    "pregnancy",
+    "pregnant",
+    "sexual orientation",
+    "transgender",
+    "national origin",
+    "age",
+    "disability",
+    "genetic information",
+)
+
+_EMPLOYMENT_ACTION_TERMS = (
+    "hire",
+    "hiring",
+    "reject",
+    "select",
+    "rank",
+    "score",
+    "promote",
+    "promotion",
+    "discipline",
+    "terminate",
+    "termination",
+    "fire",
+)
+_CASE_SPECIFIC_DISCRIMINATION_TERMS = (
+    "was i discriminated against",
+    "was i illegally discriminated",
+    "did my employer discriminate",
+    "do i have a discrimination case",
+    "is this discrimination",
+)
+
 
 def evaluate_question(question: str) -> GuardrailDecision:
     """Evaluate a question before retrieval without persisting it."""
@@ -99,7 +137,28 @@ def evaluate_question(question: str) -> GuardrailDecision:
                 "remove unnecessary personal details."
             ),
         )
-
+    if any(
+        term in lowered
+        for term in _CASE_SPECIFIC_DISCRIMINATION_TERMS
+    ):
+        return GuardrailDecision(
+            allowed=False,
+            reason="human_escalation_required",
+            categories=[
+                "case_specific_discrimination_determination"
+            ],
+            controls=[
+                "human_escalation",
+                "human_oversight",
+                "legal_determination_restriction",
+            ],
+            user_message=(
+                "This assistant can provide general policy information, "
+                "but it cannot determine whether discrimination occurred "
+                "or provide legal advice. Please contact Human Resources "
+                "through the approved confidential channel."
+            ),
+        )
     categories = []
     controls = []
 
@@ -113,6 +172,21 @@ def evaluate_question(question: str) -> GuardrailDecision:
 
     if any(term in lowered for term in _DECISION_TERMS):
         categories.append("automated_employment_decision")
+
+    has_protected_characteristic = any(
+       term in lowered
+       for term in _PROTECTED_CHARACTERISTIC_TERMS
+    )
+
+    has_employment_action = any(
+        term in lowered
+        for term in _EMPLOYMENT_ACTION_TERMS
+    )
+
+    if has_protected_characteristic and has_employment_action:
+        categories.append(
+        "protected_characteristic_employment_decision"
+       )
 
     if categories:
         if any(
@@ -132,8 +206,20 @@ def evaluate_question(question: str) -> GuardrailDecision:
             )
         ):
             controls.append("confidential_hr_data_restriction")
-        if "automated_employment_decision" in categories:
-            controls.extend(["human_oversight", "prohibited_use_enforcement"])
+        if any(
+            category in categories
+            for category in (
+                "automated_employment_decision",
+                "protected_characteristic_employment_decision",
+            )
+        ):
+            controls.extend(
+                [
+                    "human_oversight",
+                    "prohibited_use_enforcement",
+                    "fairness_and_non_discrimination",
+                ]
+            )
 
         return GuardrailDecision(
             allowed=False,

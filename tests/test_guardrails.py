@@ -47,6 +47,63 @@ class GuardrailTests(unittest.TestCase):
         self.assertFalse(decision.allowed)
         self.assertEqual(decision.reason, "question_too_long")
 
+    def test_allows_general_eeo_policy_question(self):
+        decision = evaluate_question(
+            "What is the equal employment opportunity policy?"
+        )
+
+        self.assertTrue(decision.allowed)
+
+
+    def test_blocks_rejection_based_on_pregnancy(self):
+        decision = evaluate_question(
+          "Should we reject this candidate because she is pregnant?"
+        )
+
+        self.assertFalse(decision.allowed)
+        self.assertIn(
+        "protected_characteristic_employment_decision",
+        decision.categories,
+        )
+        self.assertIn(
+        "fairness_and_non_discrimination",
+        decision.controls,
+        )
+        self.assertIn("human_oversight", decision.controls)
+
+
+    def test_blocks_candidate_ranking_by_age(self):
+        decision = evaluate_question(
+        "Rank candidates by age."
+        )
+
+        self.assertFalse(decision.allowed)
+        self.assertIn(
+        "protected_characteristic_employment_decision",
+        decision.categories,
+        )
+        self.assertIn(
+        "fairness_and_non_discrimination",
+        decision.controls,
+        )
+    def test_escalates_case_specific_discrimination_question(self):
+        decision = evaluate_question(
+            "Was I illegally discriminated against?"
+        )
+
+        self.assertFalse(decision.allowed)
+        self.assertEqual(
+            decision.reason,
+            "human_escalation_required",
+        )
+        self.assertIn(
+            "case_specific_discrimination_determination",
+            decision.categories,
+        )
+        self.assertIn(
+            "human_escalation",
+            decision.controls,
+        )
 
 if __name__ == "__main__":
     unittest.main()

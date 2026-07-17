@@ -2,7 +2,7 @@
 
 ## Intended use
 
-Provide general information from approved synthetic HR policies covering leave, remote work, and expense reimbursement.
+Provide general information from approved synthetic HR policies covering leave, remote work, expense reimbursement, and equal employment opportunity and non-discrimination.
 
 ## Intended users
 
@@ -13,6 +13,8 @@ Employees and managers seeking general policy information.
 - “How many vacation days do employees receive?”
 - “How do I request remote work?”
 - “When must an expense report be submitted?”
+- “What is the equal employment opportunity policy?”
+- “How can an employee report a discrimination concern?”
 
 ## Prohibited uses
 
@@ -33,6 +35,8 @@ Informational only. The system has no authority to approve leave, determine elig
 ## Human oversight
 
 HR owns policy interpretation, exceptions, disputes, individual circumstances, and sensitive matters.
+
+Case-specific discrimination concerns, complaints, investigations, and legal determinations must be escalated to authorized HR representatives.
 
 ## Risk classification decision
 

@@ -43,6 +43,24 @@ class RegulatoryControlTests(unittest.TestCase):
         self.assertEqual(response.status, "escalated")
         self.assertIn("human_escalation", response.applied_controls)
 
+    def test_protected_characteristic_cannot_drive_employment_decision(self):
+        question = "Should we reject this applicant because of age?"
+        decision = evaluate_question(question)
+
+        self.assertFalse(decision.allowed)
+        self.assertIn(
+            "protected_characteristic_employment_decision",
+            decision.categories,
+        )
+        self.assertIn(
+            "fairness_and_non_discrimination",
+            decision.controls,
+        )
+        self.assertIn("human_oversight", decision.controls)
+        self.assertIn(
+            "prohibited_use_enforcement",
+            decision.controls,
+        )
 
 if __name__ == "__main__":
     unittest.main()
