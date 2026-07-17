@@ -1,0 +1,63 @@
+Document-ID: HR-EEO-001
+Title: ssp-dev-hr-aigovern-poc Equal Employment Opportunity and Non-Discrimination Policy
+Version: 1.0
+Classification: Internal Synthetic
+Status: Approved for POC
+
+## Policy Statement
+
+ssp-dev-hr-aigovern-poc is committed to providing equal employment
+opportunity to qualified applicants and employees.
+
+Employment decisions must be based on legitimate, job-related requirements
+and business needs.
+
+No applicant or employee will be discriminated against because of race,
+color, religion, sex, pregnancy, sexual orientation, transgender status,
+national origin, age, disability, genetic information, or any other
+characteristic protected by applicable law.
+
+## Scope
+
+This policy applies to applicants and employees.
+
+It applies to recruitment, hiring, work assignments, compensation, training,
+promotion, performance management, discipline, termination, and other
+employment activities.
+
+## Equal and Objective Treatment
+
+Employment criteria must be relevant to the position and applied consistently.
+
+Protected characteristics must not be used to rank, score, select, reject,
+promote, discipline, or terminate an applicant or employee.
+
+## Anti-Retaliation
+
+Retaliation against an individual who raises a good-faith discrimination
+concern, participates in an authorized investigation, or exercises a
+protected employment right is prohibited.
+
+## Reporting Concerns
+
+Applicants and employees may report equal-employment or discrimination
+concerns to Human Resources through the approved confidential reporting
+channel.
+
+The HR Policy Assistant provides general policy information only.
+
+It cannot determine whether unlawful discrimination occurred, investigate
+an allegation, provide legal advice, or decide the outcome of a complaint.
+
+## Human Decision Requirement
+
+Hiring, promotion, discipline, termination, accommodation, complaint, and
+investigation decisions must remain with authorized human reviewers.
+
+The HR Policy Assistant must not make or recommend these decisions.
+
+## Synthetic Data Notice
+
+This policy is fictional and is used only for education, testing, and
+demonstration within the HR AI Governance POC. It is not an actual company
+policy or legal advice.

@@ -31,6 +31,10 @@ class PolicySearchTests(unittest.TestCase):
         results = self.engine.search("When must I submit an expense report?")
         self.assertGreater(len(results), 0)
         self.assertEqual(results[0].chunk.document_id, "FIN-EXPENSE-001")
+    def test_eeo_question_retrieves_eeo_policy(self):
+        results = self.engine.search("What is the equal employment opportunity policy?")
+        self.assertGreater(len(results), 0)
+        self.assertEqual(results[0].chunk.document_id, "HR-EEO-001" )
 
     def test_source_has_traceability_metadata(self):
         result = self.engine.search("vacation request approval")[0]

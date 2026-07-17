@@ -24,6 +24,23 @@ class ResponseBuilderTests(unittest.TestCase):
         self.assertTrue(response.source_section)
         self.assertTrue(response.source_version)
 
+    def test_eeo_answer_has_source_and_version(self):
+        question = "What is the equal employment opportunity policy?"
+        response = build_response(question, self.engine.search(question) )
+
+        self.assertEqual(response.status, "answered")
+        self.assertEqual(
+             response.source_title,
+             "ssp-dev-hr-aigovern-poc Equal Employment Opportunity "
+             "and Non-Discrimination Policy",
+        )
+        self.assertEqual(response.source_section, "Policy Statement")
+        self.assertEqual(response.source_version, "1.0")
+        self.assertIn(
+             "equal employment opportunity",
+              response.answer.lower(),
+        )
+
     def test_unsupported_question_escalates(self):
         question = "What is the parental leave policy?"
         response = build_response(question, self.engine.search(question))
@@ -44,7 +61,7 @@ class ResponseBuilderTests(unittest.TestCase):
             result.chunk.text for result in self.engine.search(question)
             if result.chunk.title == response.source_title
             and result.chunk.section == response.source_section
-    
+
         ]
         self.assertTrue(any(response.answer in text for text in source_texts))
 

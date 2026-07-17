@@ -12,8 +12,11 @@
 | FR-09 evidence threshold | C-10 | `response_builder.py` | `test_response_builder.py` | Test report |
 | FR-10 extractive answer | C-09 | `response_builder.py` | `test_response_builder.py` | Test report |
 | FR-11 source citation | C-09 | `app.py` | `test_response_builder.py` | Source metadata |
-| FR-12 human escalation | C-15 | `response_builder.py` | `test_regulatory_controls.py` | Test report |
+| FR-12 human escalation | C-15 | `guardrails.py`, `response_builder.py`, `app.py` | `test_guardrails.py`, `test_regulatory_controls.py` | Test report |
 | FR-13 minimal audit | C-13 | `audit.py` | `test_audit.py` | Audit schema |
+| FR-14 EEO approved policy retrieval | C-08 | `policy_search.py` | `test_eeo_question_retrieves_eeo_policy` | Test report and source metadata |
+| FR-15 protected characteristics cannot drive employment decisions | C-06 | `guardrails.py` | `test_blocks_rejection_based_on_pregnancy`, `test_protected_characteristic_cannot_drive_employment_decision` | Test report |
+| FR-16 case-specific discrimination determination requires human escalation | C-15 | `guardrails.py`, `app.py` | `test_escalates_case_specific_discrimination_question` | Test report and manual UI validation |
 | GR-01 inventory | Governance | N/A | Review | Document 08 |
 | GR-03 risk assessment | Governance | N/A | Review | Documents 09–12 |
 | GR-06 test evidence | C-11 | `tests/` | CI | Test report |
